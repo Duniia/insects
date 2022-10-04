@@ -4,12 +4,13 @@ const cacheName = 'cache-insects';
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cacheName).then(function(cache) {
-            return cache.addAll(["/insects2/", "/insects2/index.html", "/insects2/butterflies.jpg", "/insects2/butterfly.jpg", "/insects2/dragonfly.jpg"]);
+            return cache.addAll(["/insects/", "/insects/index.html", "/insects/butterflies.jpg", "/insects/butterfly.jpg", "/insects/dragonfly.jpg"]);
         })
     );
 });
 
-// Hvis resource ikke er tilgængelig online, så søg i cachen efter et match.
+// Hvis resource ikke er tilgængelig online, 
+//så søg i cachen efter et match.
 self.addEventListener('fetch', function(event) {
     event.respondWith (
         fetch(event.request).catch(() =>
