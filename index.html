@@ -8,18 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-
     <h1>Insects</h1>
-    <img src="butterflies.jpg" id="butterflies">
-    <img src="butterfly.jpg" id="butterfly">
-    <img src="dragonfly.jpg" id="dragonfly">
+    <img src="butterflies.jpg" alt="butterflies" alt="Insects">
+    <img src="butterfly.jpg" alt="butterfly" alt="Insects">
+    <img src="dragonfly.jpg" alt="dragonfly" alt="Insects">
 
     <script>
+        //asking the browser if it supports service wrker
         if ('serviceWorker' in navigator) {
-            console.log("working")
-            navigator.serviceWorker.register('serviceworker.js');
-        }
-        else {
+            console.log("serviceworker is working")
+            navigator.serviceWorker.register('/insects/serviceworker.js');
+        } else {
             console.log("not working")
         }
     </script>
