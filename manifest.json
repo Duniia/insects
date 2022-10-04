@@ -9,12 +9,12 @@
         {
             "src": "icon-192.png",
             "sizes": "192x192",
-            "Type": "img/png"
+            "Type": "image/png"
         },
         {
             "src": "icon-512.png",
             "sizes": "512x512",
-            "Type": "img/png"
+            "Type": "image/png"
         }
     ],
     "start_url": "/insects/index.html"
